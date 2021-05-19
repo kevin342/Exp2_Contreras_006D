@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/Javascript">
+            function validacion()
+            {
+                lduenho= document.getElementById('nombre').value;
+                ed = document.getElementById('edad').value; 
+
+
+                if(lduenho == null || nom.length==0 || /^\s+$/.test(lduenho))
+                {
+                    alert('Error.. debe ingresar un nombre');
+                    document.getElementById('nombre').value="";
+                    document.datos.lduenho.focus();
+                    return false;
+                }
+                
+                if(isNaN(ed) || ed.length == 0)
+                 {
+                    alert('Error...debe ingresar una edad válida');
+                    document.getElementById('edad').value="";
+                    document.datos.ed.focus();
+                    return false;
+                }  
+                return true;      
+
+                
+            }
+
+
+        </script>
+    </head>
+    <body>
+        
+        <form class="form-register" name="contacto" method="POST" onsubmit="return validacion()" action="file:///C:/Users/goku-/Desktop/ex2/principal.html">
+            <h1>Ingrese datos</h1>
+            
+            <label for="lname">Nombre Mascota: </label>
+            <input class="xd" type="text" id="nomMascota" name="nombre" placeholder="ingrese nombre de mascota"required><br>
+            <label for="lduenho">Dueño Mascota: </label>
+            <input class="xd"type="text" id="nomDuenho" name="nom" placeholder="ingrese nombre de dueño"><br><br>
+            <label for="lmensaje">Seleccione género mascota: </label><br>
+            <input type="radio" id="macho" name="genero" value="macho">
+            <label for="lmacho">Macho</label><br>
+            <input type="radio" id="hembra" name="genero" value="hembra">
+            <label for="lhembra">hembra</label><br>
+            <label for="Fnac">Fecha de Nacimiento:</label>
+            <input type="date" id="FechaNac" name="Nacimiento" min="1910-01-01" max="2200-12-31"><br>
+            <form action="/action_page.php"><br>
+            <p>Describa a su mascota</p>    
+                <textarea class="xd" name="message" rows="10" cols="30"></textarea>
+                <br>
+            
+
+
+            <input class="boton" type="submit" value="Enviar" href="file:///C:/Users/goku-/Desktop/ex2/principal.html">
+
+            
+        </form>
+
+
+    </body>
